@@ -1,156 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Behold! The Awesomeness of [Your Name Here]</title>
-    <!-- Tailwind CSS CDN for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter for a clean, modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles to enhance Tailwind, ensuring Inter font is applied */
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* A cool, subtle gradient background */
-            min-height: 100vh; /* Ensure body takes full viewport height */
-            display: flex;
-            flex-direction: column;
-            color: #e2e8f0; /* Light text color for contrast */
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #4a5568;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #81e6d9;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4fd1c5;
-        }
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
 
-        /* Keyframe for a subtle pulse animation on elements */
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-            }
-            50% {
-                transform: scale(1.02);
-                box-shadow: 0 0 20px rgba(129, 230, 217, 0.6);
-            }
-        }
-
-        /* Apply pulse animation to specific elements */
-        .animate-pulse-subtle {
-            animation: pulse 3s infinite ease-in-out;
-        }
-
-        /* Keyframe for a dazzling text shadow effect */
-        @keyframes dazzling-text {
-            0% { text-shadow: 0 0 5px #81e6d9, 0 0 10px #4fd1c5; }
-            25% { text-shadow: 0 0 10px #4fd1c5, 0 0 20px #38b2ac; }
-            50% { text-shadow: 0 0 15px #38b2ac, 0 0 30px #2c7a7b; }
-            75% { text-shadow: 0 0 10px #4fd1c5, 0 0 20px #38b2ac; }
-            100% { text-shadow: 0 0 5px #81e6d9, 0 0 10px #4fd1c5; }
-        }
-
-        .dazzling-text {
-            animation: dazzling-text 4s infinite alternate;
-        }
-
-        /* Background particle effect - Enhanced for a starfield look */
-        .particle-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: -1; /* Send to background */
-        }
-
-        .particle {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.4); /* Brighter particles */
-            border-radius: 50%;
-            opacity: 0;
-            animation: floatAndFade 15s infinite ease-in-out; /* Longer duration for smoother float */
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle glow */
-        }
-
-        @keyframes floatAndFade {
-            0% {
-                transform: translateY(100vh) scale(0); /* Start from bottom of screen */
-                opacity: 0;
-            }
-            20% {
-                opacity: 1;
-                transform: translateY(80vh) scale(1);
-            }
-            80% {
-                opacity: 1;
-                transform: translateY(20vh) scale(1.2); /* Slightly larger in middle */
-            }
-            100% {
-                transform: translateY(-10vh) scale(0); /* Go slightly above top and fade out */
-                opacity: 0;
-            }
-        }
-
-        /* NEW: Animated background overlay for a crazy effect */
-        .animated-background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2; /* Even further back than particles */
-            background: radial-gradient(circle at center, rgba(129, 230, 217, 0.15) 0%, transparent 70%); /* Subtle glowing circle */
-            animation: swirlAndPulse 20s infinite linear; /* Apply the new animation */
-        }
-
-        @keyframes swirlAndPulse {
-            0% {
-                transform: scale(1) rotate(0deg);
-                opacity: 0.8;
-                filter: blur(0px);
-            }
-            25% {
-                transform: scale(1.1) rotate(90deg);
-                opacity: 0.9;
-                filter: blur(2px);
-            }
-            50% {
-                transform: scale(1) rotate(180deg);
-                opacity: 0.8;
-                filter: blur(0px);
-            }
-            75% {
-                transform: scale(0.9) rotate(270deg);
-                opacity: 0.7;
-                filter: blur(2px);
-            }
-            100% {
-                transform: scale(1) rotate(360deg);
-                opacity: 0.8;
-                filter: blur(0px);
-            }
-        }
-    </style>
-</head>
-<body class="flex flex-col min-h-screen">
-    <!-- Particle background container -->
-    <div class="particle-container"></div>
-    <!-- NEW: Animated background overlay for a crazy effect -->
-    <div class="animated-background-overlay"></div>
-
+<BaseLayout title="Behold! The Awesomeness of Jeff "The Rizzler" Languirand">
     <!-- Header: The Grand Entrance -->
     <header class="relative bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-20 px-4 sm:px-6 lg:px-8 text-center shadow-2xl overflow-hidden rounded-b-3xl">
         <!-- Abstract background shapes for visual interest -->
@@ -249,23 +101,23 @@
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">🏆</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Revolutionized [Industry/Field]</h3>
-                        <p class="text-gray-200">Single-handedly redefined the landscape of [specific area], leaving competitors in awe and history books scrambling to update.</p>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Revolutionized Jazzercise</h3>
+                        <p class="text-gray-200">Single-handedly redefined the landscape of middle-aged exercising, leaving competitors in awe and history books scrambling to update.</p>
                     </div>
                 </div>
                 <!-- Achievement Card 2 -->
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">🚀</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Invented the [Cool Thing]</h3>
-                        <p class="text-gray-200">My brainchild, the [Cool Thing], has since become an indispensable part of modern existence. You're welcome.</p>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Invented the modern milk jug cap.</h3>
+                        <p class="text-gray-200">My brainchild, the piece you rip off and throw away from milk jug caps, has since become an indispensable part of modern existence. You're welcome.</p>
                     </div>
                 </div>
                 <!-- Achievement Card 3 -->
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">🌟</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Mastered [Complex Skill] in record time</h3>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Mastered social anxiety problems in record time</h3>
                         <p class="text-gray-200">They said it couldn't be done. I did it. While juggling flaming chainsaws. Blindfolded. (Figuratively, mostly.)</p>
                     </div>
                 </div>
@@ -312,107 +164,11 @@
     <!-- Footer: The End of a Chapter, Not the Awesomeness -->
     <footer class="bg-gray-900 bg-opacity-50 text-center py-8 px-4 sm:px-6 lg:px-8 mt-12 rounded-t-3xl shadow-inner">
         <p class="text-gray-400 text-sm">
-            &copy; <span id="current-year"></span> The Legend of [Your Name Here]. All rights reserved. (But really, who could ever replicate this?)
+            &copy; <span id="current-year"></span> The Legend of Jeff Languirand. All rights reserved. (But really, who could ever replicate this?)
         </p>
         <div class="flex justify-center space-x-6 mt-4">
             <a href="#" class="text-gray-400 hover:text-teal-300 transition duration-300 ease-in-out">Privacy Policy</a>
             <a href="#" class="text-gray-400 hover:text-teal-300 transition duration-300 ease-in-out">Terms of Awesomeness</a>
         </div>
     </footer>
-
-    <!-- JavaScript for dynamic elements -->
-    <script>
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Fun Facts Rotator
-        const funFacts = [
-            "I once taught a squirrel to code in assembly language. It's now a lead developer.",
-            "My coffee brews itself, out of sheer respect.",
-            "I can parallel park a spaceship on the first try.",
-            "My shadow has its own fan club.",
-            "I'm fluent in sarcasm, ancient Sumerian, and the language of dolphins.",
-            "Even my typos are grammatically perfect.",
-            "I've counted to infinity. Twice.",
-            "My ideas are so good, they often spontaneously generate confetti.",
-            "I can make a grown-up cry... tears of joy, of course.",
-            "My smile is known to increase local market value."
-        ];
-        let currentFactIndex = 0;
-        const factDisplay = document.getElementById('fact-display');
-        const nextFactBtn = document.getElementById('next-fact-btn');
-
-        function displayFact() {
-            factDisplay.style.opacity = 0; // Fade out
-            setTimeout(() => {
-                factDisplay.textContent = funFacts[currentFactIndex];
-                factDisplay.style.opacity = 1; // Fade in
-            }, 300); // Match this to CSS transition duration if any
-        }
-
-        nextFactBtn.addEventListener('click', () => {
-            currentFactIndex = (currentFactIndex + 1) % funFacts.length;
-            displayFact();
-        });
-
-        // Initial fact display
-        displayFact();
-
-        // Automatic fact rotation (optional)
-        setInterval(() => {
-            currentFactIndex = (currentFactIndex + 1) % funFacts.length;
-            displayFact();
-        }, 8000); // Change fact every 8 seconds
-
-        // Particle background effect
-        const particleContainer = document.querySelector('.particle-container');
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            const size = Math.random() * 5 + 2; // Size between 2px and 7px
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}vw`;
-            particle.style.animationDuration = `${Math.random() * 10 + 5}s`; // Duration between 5s and 15s
-            particle.style.animationDelay = `-${Math.random() * 10}s`; // Random start delay
-            particleContainer.appendChild(particle);
-
-            // Remove particle after animation to prevent DOM bloat
-            particle.addEventListener('animationend', () => {
-                particle.remove();
-            });
-        }
-
-        // Generate a continuous stream of particles (increased frequency for more "crazy")
-        setInterval(createParticle, 100); // Create a new particle every 100ms
-
-        // NEW: Logic for "Uncover My Legendary Status" button
-        const uncoverButton = document.getElementById('uncover-button');
-        const hiddenRevelationSection = document.getElementById('hidden-revelation');
-
-        uncoverButton.addEventListener('click', () => {
-            // Toggle the 'hidden' class
-            hiddenRevelationSection.classList.toggle('hidden');
-
-            // Add/remove classes for a smooth reveal animation
-            if (!hiddenRevelationSection.classList.contains('hidden')) {
-                // If it's now visible, trigger the reveal animation
-                setTimeout(() => {
-                    hiddenRevelationSection.classList.remove('scale-95', 'opacity-0');
-                    hiddenRevelationSection.classList.add('scale-100', 'opacity-100');
-                    // Scroll to the revealed section
-                    hiddenRevelationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 10); // Small delay to allow 'hidden' to be removed before transition starts
-            } else {
-                // If it's becoming hidden, reverse the animation before hiding
-                hiddenRevelationSection.classList.remove('scale-100', 'opacity-100');
-                hiddenRevelationSection.classList.add('scale-95', 'opacity-0');
-                // After the transition, truly hide it
-                setTimeout(() => {
-                    hiddenRevelationSection.classList.add('hidden');
-                }, 700); // Match this to the transition duration
-            }
-        });
-    </script>
-</body>
-</html>
+</BaseLayout>
