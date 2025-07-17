@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <!-- Your global styles will be imported here -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <!-- Google Fonts - Inter for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+    <!-- Particle background container -->
+    <div class="particle-container"></div>
+    <!-- Animated background overlay for a crazy effect -->
+    <div class="animated-background-overlay"></div>
+
+    <slot /> <!-- This is where your page content will be injected -->
+
+    <!-- Your global scripts will be imported here -->
+    <script src="/src/scripts/main.js"></script>
+</body>
+</html>
