@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Behold! The Awesomeness of Jeff Languirand</title>
+    <title>Behold! The Awesomeness of [Your Name Here]</title>
     <!-- Tailwind CSS CDN for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter for a clean, modern look -->
@@ -164,9 +164,9 @@
                 Witness True Greatness!
             </h1>
             <p class="text-xl sm:text-2xl lg:text-3xl font-light mb-6">
-                Prepare to be amazed by the unparalleled awesomeness of <span class="font-bold text-teal-300">Jeff "The Rizzler" Languirand</span>
+                Prepare to be amazed by the unparalleled awesomeness of <span class="font-bold text-teal-300">[Your Name Here]</span>
             </p>
-            <button class="bg-teal-400 hover:bg-teal-500 text-purple-900 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out animate-pulse-subtle">
+            <button id="uncover-button" class="bg-teal-400 hover:bg-teal-500 text-purple-900 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out animate-pulse-subtle">
                 Uncover My Legendary Status
             </button>
         </div>
@@ -182,6 +182,29 @@
                 From the moment I emerged, it was clear: the universe had a new benchmark for excellence. My journey has been a symphony of triumphs, a ballet of breakthroughs, and an epic saga of <span class="font-bold text-yellow-300">sheer, unadulterated brilliance</span>. Every step, every thought, every breath has been a testament to what happens when awesomeness takes human form.
             </p>
         </section>
+
+        <!-- NEW: Hidden Section to be revealed -->
+        <section id="hidden-revelation" class="hidden bg-white bg-opacity-20 rounded-2xl p-8 mb-12 shadow-2xl border border-yellow-500 text-center transform scale-95 opacity-0 transition-all duration-700 ease-out">
+            <h2 class="text-5xl font-extrabold text-yellow-300 mb-6 dazzling-text">The Secret Scroll of Supreme Skills!</h2>
+            <p class="text-xl leading-relaxed max-w-4xl mx-auto mb-8">
+                You've dared to peek behind the curtain of ordinary existence! What you see here are the *truly* top-secret, mind-bending abilities that defy mere mortal comprehension. Prepare for your reality to be redefined.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="bg-white bg-opacity-10 p-5 rounded-xl border border-yellow-400">
+                    <h3 class="text-2xl font-bold text-teal-200 mb-2">Quantum Leap Thinker</h3>
+                    <p class="text-lg text-gray-200">My thoughts don't just connect dots; they create new dimensions where dots can exist. Future problems? Already solved, last Tuesday.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-5 rounded-xl border border-yellow-400">
+                    <h3 class="text-2xl font-bold text-teal-200 mb-2">Reality Warper (Minor)</h3>
+                    <p class="text-lg text-gray-200">Sometimes, if I concentrate hard enough, I can make traffic lights turn green. Don't ask how. It's awesome.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-5 rounded-xl border border-yellow-400 col-span-full">
+                    <h3 class="text-2xl font-bold text-teal-200 mb-2">Infinite Energy Source (Personal)</h3>
+                    <p class="text-lg text-gray-200">My enthusiasm alone could power a small city. My actual energy? Let's just say the sun gets jealous.</p>
+                </div>
+            </div>
+        </section>
+        <!-- END NEW Hidden Section -->
 
         <!-- Section 2: My Superpowers (Skills) -->
         <section id="skills" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -226,23 +249,23 @@
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">🏆</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Revolutionized the world of fitness</h3>
-                        <p class="text-gray-200">Single-handedly redefined the landscape of jazzercise, leaving competitors in awe and history books scrambling to update.</p>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Revolutionized [Industry/Field]</h3>
+                        <p class="text-gray-200">Single-handedly redefined the landscape of [specific area], leaving competitors in awe and history books scrambling to update.</p>
                     </div>
                 </div>
                 <!-- Achievement Card 2 -->
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">🚀</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Invented modern milk jug cap sealing process.</h3>
-                        <p class="text-gray-200">My brainchild, the thing you rip off of milk jug caps, has since become an indispensable part of modern existence. You're welcome.</p>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Invented the [Cool Thing]</h3>
+                        <p class="text-gray-200">My brainchild, the [Cool Thing], has since become an indispensable part of modern existence. You're welcome.</p>
                     </div>
                 </div>
                 <!-- Achievement Card 3 -->
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">🌟</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Mastered crippling social anxiety in record time</h3>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Mastered [Complex Skill] in record time</h3>
                         <p class="text-gray-200">They said it couldn't be done. I did it. While juggling flaming chainsaws. Blindfolded. (Figuratively, mostly.)</p>
                     </div>
                 </div>
@@ -250,7 +273,7 @@
                 <div class="bg-white bg-opacity-15 rounded-xl p-6 shadow-lg flex items-start space-x-4 border border-indigo-300">
                     <span class="text-5xl">👑</span>
                     <div>
-                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Became the llama whisperer of Pure Awesomeness</h3>
+                        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">Became a [Title] of Pure Awesomeness</h3>
                         <p class="text-gray-200">My reputation precedes me, often arriving via a fanfare of trumpets and a shower of glitter.</p>
                     </div>
                 </div>
@@ -289,7 +312,7 @@
     <!-- Footer: The End of a Chapter, Not the Awesomeness -->
     <footer class="bg-gray-900 bg-opacity-50 text-center py-8 px-4 sm:px-6 lg:px-8 mt-12 rounded-t-3xl shadow-inner">
         <p class="text-gray-400 text-sm">
-            &copy; <span id="current-year"></span> The Legend of Jeff Languirand. All rights reserved. (But really, who could ever replicate this?)
+            &copy; <span id="current-year"></span> The Legend of [Your Name Here]. All rights reserved. (But really, who could ever replicate this?)
         </p>
         <div class="flex justify-center space-x-6 mt-4">
             <a href="#" class="text-gray-400 hover:text-teal-300 transition duration-300 ease-in-out">Privacy Policy</a>
@@ -362,6 +385,34 @@
 
         // Generate a continuous stream of particles (increased frequency for more "crazy")
         setInterval(createParticle, 100); // Create a new particle every 100ms
+
+        // NEW: Logic for "Uncover My Legendary Status" button
+        const uncoverButton = document.getElementById('uncover-button');
+        const hiddenRevelationSection = document.getElementById('hidden-revelation');
+
+        uncoverButton.addEventListener('click', () => {
+            // Toggle the 'hidden' class
+            hiddenRevelationSection.classList.toggle('hidden');
+
+            // Add/remove classes for a smooth reveal animation
+            if (!hiddenRevelationSection.classList.contains('hidden')) {
+                // If it's now visible, trigger the reveal animation
+                setTimeout(() => {
+                    hiddenRevelationSection.classList.remove('scale-95', 'opacity-0');
+                    hiddenRevelationSection.classList.add('scale-100', 'opacity-100');
+                    // Scroll to the revealed section
+                    hiddenRevelationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 10); // Small delay to allow 'hidden' to be removed before transition starts
+            } else {
+                // If it's becoming hidden, reverse the animation before hiding
+                hiddenRevelationSection.classList.remove('scale-100', 'opacity-100');
+                hiddenRevelationSection.classList.add('scale-95', 'opacity-0');
+                // After the transition, truly hide it
+                setTimeout(() => {
+                    hiddenRevelationSection.classList.add('hidden');
+                }, 700); // Match this to the transition duration
+            }
+        });
     </script>
 </body>
 </html>
